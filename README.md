@@ -10,7 +10,7 @@ A repository including all of the materials I utilized to improve my understandi
 - [GeeksForGeeks](https://www.geeksforgeeks.org/introduction-to-arrays/)
 
 ### Strings Learning Resources
-- [GeeksForGeeks](https://www.geeksforgeeks.org/introduction-to-arrays/)
+- [GeeksForGeeks](https://www.geeksforgeeks.org/strings-in-c-2/)
 
 ### Exercises
 - [HackerRank](https://www.hackerrank.com/interview/interview-preparation-kit/arrays/challenges)
