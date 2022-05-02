@@ -6,7 +6,7 @@ A repository including all of the materials I utilized to improve my understandi
 
 ## Week 1 Goal: Arrays & Strings 
 
-### Arrays learning resources
+### Arrays Learning resources
 - [GeeksForGeeks](https://www.geeksforgeeks.org/introduction-to-arrays/)
 
 ### Strings Learning Resources
