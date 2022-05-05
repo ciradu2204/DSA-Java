@@ -4,7 +4,7 @@
 A repository including all of the materials I utilized to improve my understanding of datastructures and algorithms.
 
 
-## Week 1 Goal: Arrays & Strings 
+## Week 1 Goal: Strings 
 
 ### Arrays Learning resources
 - [GeeksForGeeks](https://www.geeksforgeeks.org/introduction-to-arrays/)
@@ -13,7 +13,6 @@ A repository including all of the materials I utilized to improve my understandi
 - [GeeksForGeeks](https://www.geeksforgeeks.org/strings-in-c-2/)
 
 ### Exercises
-- [HackerRank](https://www.hackerrank.com/interview/interview-preparation-kit/arrays/challenges)
 - [algoExpert](https://www.algoexpert.io/product)
 
 
