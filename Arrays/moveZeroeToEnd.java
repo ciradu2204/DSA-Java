@@ -1,4 +1,4 @@
-public class moveZeroeToEnd {
+public class moveZeroend {
 
     /**
      * LeetCode - 283: https://leetcode.com/problems/move-zeroes/

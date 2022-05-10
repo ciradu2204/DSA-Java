@@ -38,7 +38,7 @@ public class GenerateDocument {
         for(int i = 0; i<character.length(); i++){
 
 
-            char lastVal = character.charAt(i);
+              character.charAt(i);
 
             if(map.containsKey(character.charAt(i))){
 

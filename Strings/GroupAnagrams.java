@@ -1,11 +1,8 @@
-import java.security.KeyStore.Entry;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import javax.sql.rowset.WebRowSet;
 
 public class GroupAnagrams {
 
@@ -26,7 +23,7 @@ public class GroupAnagrams {
       public static void main(String[] args) {
 
         List<String> input = new ArrayList<>(Arrays.asList("yo", "act", "flop", "tac", "foo", "cat", "oy", "olfp"));
-        List<List<String>> result = Solution1(input);
+         Solution1(input);
  
           
       }
