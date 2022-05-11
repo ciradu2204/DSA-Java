@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "Strings",
+        "Graphs"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/cynthia/Downloads/json-simple-1.1.1.jar"
+    ]
+}
