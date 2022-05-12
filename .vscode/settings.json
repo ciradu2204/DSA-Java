@@ -1,7 +1,8 @@
 {
     "java.project.sourcePaths": [
         "Strings",
-        "Graphs"
+        "Graphs",
+        "Arrays"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",

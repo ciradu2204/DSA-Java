@@ -1,4 +1,4 @@
-public class moveZeroend {
+public class moveZeroeToEnd {
 
     /**
      * LeetCode - 283: https://leetcode.com/problems/move-zeroes/
@@ -9,7 +9,7 @@ public class moveZeroend {
     public static void main(String[] args) {
 
       int[] arr = {0,1,0,3,12}; 
-      int[] result = moveZeroeToEnd(arr); 
+      int[] result = Solution(arr); 
 
       //print result 
       for(int i=0; i<result.length; i++){
@@ -18,7 +18,7 @@ public class moveZeroend {
         
     }
 
-    public static int[] moveZeroeToEnd(int[] nums){
+    public static int[] Solution(int[] nums){
                
         //edge cases 
         
