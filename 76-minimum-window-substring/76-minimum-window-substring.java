@@ -18,13 +18,13 @@ class Solution {
         
     int have = 0; 
     int shortestStringLength = Integer.MAX_VALUE; 
-    String shortestString = ""; 
+    int start = 0; 
     int leftPointer = 0; 
-         
+
     for(int rightPointer=0; rightPointer < s.length(); rightPointer++){
         
      if(window.containsKey(s.charAt(rightPointer))){
-                                     window.put(s.charAt(rightPointer),window.getOrDefault(s.charAt(rightPointer), 0) -   1); 
+                                            window.put(s.charAt(rightPointer),window.getOrDefault(s.charAt(rightPointer), 0) -   1); 
             
         if(window.get(s.charAt(rightPointer)) == 0 ){
               have += 1;   
@@ -33,27 +33,26 @@ class Solution {
            
          while(have == window.size()){
             
-            String currentShortest= s.substring(leftPointer, rightPointer +1); 
-             
-             if(currentShortest.length() < shortestStringLength ){
-                 shortestStringLength = currentShortest.length(); 
-                 shortestString = currentShortest; 
-             }
+             if((rightPointer - leftPointer) + 1 < shortestStringLength ){
+                 shortestStringLength = (rightPointer - leftPointer) + 1; 
+                 start = leftPointer; 
+              }
              
              if(window.containsKey(s.charAt(leftPointer))){
-                 window.put(s.charAt(leftPointer), window.get(s.charAt(leftPointer))+1); 
+                 window.put(s.charAt(leftPointer),       window.get(s.charAt(leftPointer))+1); 
                  
                  if(window.get(s.charAt(leftPointer)) > 0){
                      have--; 
                  }
              }
              
-
+             
              leftPointer++; 
              
          }
     } 
      
-  return shortestString;   
+ 
+  return (shortestStringLength > s.length())? "": s.substring(start, start + shortestStringLength);   
  }
 }
