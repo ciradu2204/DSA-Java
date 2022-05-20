@@ -11,21 +11,39 @@
 class Solution {
     public ListNode reverseList(ListNode head) {
         
-        
-        ListNode prev = null;
-        ListNode next = null;
-        ListNode currentNode = head; 
-        while(currentNode != null){
-            next = currentNode.next; 
-            currentNode.next = prev; 
-            prev = currentNode; 
+ // Iterative Approach       
+//         ListNode prev = null;
+//         ListNode next = null;
+//         ListNode currentNode = head; 
+//         while(currentNode != null){
+//             next = currentNode.next; 
+//             currentNode.next = prev; 
+//             prev = currentNode; 
 
-            currentNode = next; 
+//             currentNode = next; 
+//         }
+        
+//         return prev;
+        
+        ListNode result = recursive(head, null);  
+         return result; 
+    }
+    
+    public ListNode recursive(ListNode currentNode, ListNode prev){
+        
+        if(currentNode == null){
+          return prev; 
         }
         
-        return prev;
+        ListNode next = currentNode.next; 
+        currentNode.next = prev; 
+        
+        return recursive(next, currentNode); 
+        
         
     }
+    
+    
     
     
     //prev pointer
