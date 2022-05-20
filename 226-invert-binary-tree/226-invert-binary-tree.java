@@ -31,7 +31,6 @@ class Solution {
             
             for(int i=0; i<size; i++){
             TreeNode currentNode = queue.poll();
-            System.out.println(currentNode.val);
             TreeNode temp = currentNode.left; 
             currentNode.left = currentNode.right; 
             currentNode.right = temp; 
