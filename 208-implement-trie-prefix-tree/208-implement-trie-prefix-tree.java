@@ -11,30 +11,31 @@ class Trie {
     public void insert(String word) {
         
         
-//         Node currentCharacter = node;       
-//         for(int i=0; i<word.length(); i++){
+        Node currentCharacter = node;       
+        for(int i=0; i<word.length(); i++){
+            
+             if(!currentCharacter.children.containsKey(word.charAt(i))){
+                    currentCharacter.children.put(word.charAt(i), new Node());
 
-//              if(currentCharacter.children.containsKey(word.charAt(i))){
-//                 currentCharacter  = currentCharacter.children.get(word.charAt(i)); 
-//              }else{
-//                 currentCharacter.children.put(word.charAt(i), new Node());
+             }
 
-//             }  
+              currentCharacter  = currentCharacter.children.get(word.charAt(i)); 
+
                 
-//         }
+        }
         
-//         currentCharacter.isWord = true;      
+        currentCharacter.isWord = true;      
    
         
-        Node currentNode = node;
-        for (int i = 0; i < word.length(); i++) {
-            char currentChar = word.charAt(i);
-            if (!currentNode.children.containsKey(currentChar)) {
-                currentNode.children.put(currentChar, new Node());
-            }
-            currentNode = currentNode.children.get(currentChar);
-        }
-        currentNode.isWord = true;
+//         Node currentNode = node;
+//         for (int i = 0; i < word.length(); i++) {
+//             char currentChar = word.charAt(i);
+//             if (!currentNode.children.containsKey(currentChar)) {
+//                 currentNode.children.put(currentChar, new Node());
+//             }
+//             currentNode = currentNode.children.get(currentChar);
+//         }
+//         currentNode.isWord = true;
         
     }
     
