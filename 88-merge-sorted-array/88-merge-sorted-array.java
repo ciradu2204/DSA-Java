@@ -1,5 +1,8 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+        /*
+        //using an additional array
+        
         int[] result = new int[m+n]; 
         if(nums1.length == 0 && nums2.length == 0){
             return; 
@@ -32,18 +35,43 @@ class Solution {
         }     
         for(int i=0; i<result.length; i++){
             nums1[i] = result[i];
-        }    
+        } 
+        
+        */
+        //in O(n + m ) time complexity
+        int p1 = m-1; 
+        int p2 = n-1; 
+        int index = nums1.length -1; 
+        
+        while(p1 >= 0 && p2 >=0){ 
+            if(nums1[p1] > nums2[p2]){
+                nums1[index--] = nums1[p1--]; 
+            }else if(nums2[p2] > nums1[p1]){
+                nums1[index--] = nums2[p2--]; 
+            }else{
+                nums1[index--] = nums1[p1--]; 
+                nums1[index--] = nums2[p2--]; 
+            }
+            
+        }
+        
+        while(p2 >=0){
+            nums1[index--] = nums2[p2--]; 
+        }
+        
     }
+    
+   
     
     /*
     int nums1 = [1, 2, 3, 0, 0 , 0] m=3 
     int nums2 = [2,5, 6] n=3
     
-    [1, 2, 3, 0, 0, 0]     [1, 2, 2, 3 ]
-             p1
+    [1, 2, 2, 3, 5, 6]     [1, 2, 2, 3 ]
+        p1
     
     [2,5, 6]
-      p2
+     p2
     
     Alg: 
     1. create a new array with length = n + m 
